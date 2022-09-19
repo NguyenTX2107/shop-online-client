@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" , xmlns:th="http://www.springframework.org/schema/data/jaxb" xmlns:sec="http://java.sun.com/JSP/Page">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Tạp hóa online</title>
+    <link rel="icon" href="#" th:href="@{/images/title-icon.jpg}" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Sample style -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="#" th:href="@{/css/toast_message.css}">
+    <link rel="stylesheet" href="#" th:href="@{/css/universal.css}">
+    <!-- Custom script -->
+    <link rel="script" href="C:\\Users\\Admin\\IdeaProjects\\shop-online-client\\script\\toast_script.js">
+</head>
+<body>
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button" style="background-color: #908c90">Close Menu</a>
+    <a href="#" th:href="@{/admin/products/form}" onclick="w3_close()" class="w3-bar-item w3-button">Create New Product</a>
+    <a href="#" th:href="@{/admin/orders}" onclick="w3_close()" class="w3-bar-item w3-button">View List Orders</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+        <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+        <div class="w3-center w3-padding-16" style="border-bottom: 3px solid; font-weight: 600;">Cửa Hàng Tạp Hóa Online</div>
+    </div>
+</div>
+
+<!-- !PAGE CONTENT! -->
+<div id="content" class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px; display: flex; justify-content: space-around; flex-wrap: wrap;"></div>
+
+<!-- Pagination -->
+<div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+        <!-- <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a> -->
+        <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+        <!-- <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a> -->
+        <a href="#" th:href="@{/?page=${page}}" method="get"></a>
+    </div>
+</div>
+
+<script>
+    // Script to open and close sidebar
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.transition = "all linear .3s";
+        document.getElementById("mySidebar").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
+</html>

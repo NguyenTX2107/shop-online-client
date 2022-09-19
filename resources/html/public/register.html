@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Tạp hóa online</title>
+        <link rel="icon" href="/src/main/resources/static/images/title-icon.jpg" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Sample style -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+        <!-- Custom style -->
+        <link rel="stylesheet" href="../../css/toast_message.css">
+        <link rel="stylesheet" href="../../css/universal.css">
+        <!-- Custom script -->
+        <script src="../../../main/service/toast_script.js"></script>
+    </head>
+    <body>
+        <div id="cont" class="container-form"> 
+            <div id="toast"></div>
+            <div class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
+                <h2 class="w3-center">ĐĂNG KÍ</h2>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+                    <div class="w3-rest"> 
+                        <input class="w3-input w3-border" type="text" name="usernameRegister" placeholder="User Name">
+                    </div>
+                </div>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-key"></i></div>
+                    <div class="w3-rest"> 
+                        <input class="w3-input w3-border" type="password" name="passwordRegister" placeholder="Password">
+                    </div>
+                </div>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" type="number" name="phone" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-"></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" type="email" name="email" placeholder="Email">
+                    </div>
+                    </div>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-image"></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" type="text" name ="avatarUrl" placeholder="Avatar Url">
+                    </div>
+                </div>
+                <p class="w3-center" style="display: flex; justify-content: space-around;">
+                    <button id="btnRegister" class="w3-button w3-blue" type="submit">Đăng ký</button>
+                    <a class="w3-button w3-grey" href="index.html">Hủy bỏ</a>
+                </p>
+            </div>
+            <button onclick="showCancelToastMessage()">Click me</button>
+        </div>    
+    </body>
+    <script>
+        function showCancelToastMessage() {
+            toast({
+                title: 'Error',
+                message: 'Hủy bỏ đăng kí tài khoản',
+                type: 'error',
+                duration: 3000
+            })
+        }
+    </script>
+    <script src="/main/controller/RegisterController.js"></script>
+</html> 

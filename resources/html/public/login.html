@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Tạp hóa online</title>
+        <link rel="icon" href="../../images/title-icon.jpg" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Sample style -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+        <!-- <link rel="stylesheet" href="../../css/bootstrap.min.css"> -->
+        <!-- Custom style -->
+        <link rel="stylesheet" href="../../css/universal.css">
+        <link rel="stylesheet" href="../../css/toast_message.css">
+        <!-- Custom script -->
+        <script src="../../../main/service/ToastMessageService.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container-form"> 
+            <div class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
+                <h2 class="w3-center">ĐĂNG NHẬP</h2>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+                    <div class="w3-rest"> 
+                        <input class="w3-input w3-border" name="usernameLogin" type="text" placeholder="User Name">
+                    </div>
+                </div>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-key"></i></div>
+                    <div class="w3-rest"> 
+                        <input class="w3-input w3-border" name="passwordLogin" type="text" placeholder="Password">
+                    </div>
+                </div>
+                <p class="w3-center" style="display: flex; justify-content: space-around;">
+                    <button id="btnLogin" class="w3-button w3-blue" type="submit">Đăng nhập</button>
+                    <a class="w3-button w3-grey" href="index.html">Hủy bỏ</a>
+                </p>
+            </div>
+            <button onclick="clickMe()">Click me</button>
+        </div>    
+
+        <!-- Toast Message -->
+        <div id="toast"></div>
+        
+    </body>
+
+    <script>
+        function clickMe() {
+            var title = "Success";
+            var message = 'Login successfully. Welcome tdhfkjhsdfgfgbkjfbgkjfhgishfhsfdighfghifshgfshg';
+            var type = 'success';
+            var duration = 3000;
+            toast({title, message, type, duration});
+        }
+    </script>
+    <script src="/main/controller/LoginController.js"></script>
+</html> 
+
+<!-- <script>
+    $(document).ready(function(){
+  alert("111111");
+});
+</script> -->
